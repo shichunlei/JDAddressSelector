@@ -6,7 +6,7 @@
 
 **Version**
 
-    【0.0.1】
+    【0.0.2】
 
 # Installation
 
@@ -24,7 +24,7 @@ Step 1. Add the JitPack repository to your build file
 Step 2. Add the dependency
 
     dependencies {
-        compile 'com.github.shichunlei:JDAddressSelector:0.0.1'
+        compile 'com.github.shichunlei:JDAddressSelector:0.0.2'
     }
 
 或者
@@ -43,10 +43,14 @@ Step 2. Add the dependency
     <dependency>
         <groupId>com.github.shichunlei</groupId>
         <artifactId>JDAddressSelector</artifactId>
-        <version>0.0.1</version>
+        <version>0.0.2</version>
     </dependency>
 
 # 更新日志
+
+【0.0.2】
+
+    修改ID类型，添加实体类构造函数
 
 【0.0.1】
 
