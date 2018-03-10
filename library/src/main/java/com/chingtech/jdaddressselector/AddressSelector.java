@@ -419,7 +419,7 @@ public class AddressSelector implements AdapterView.OnItemClickListener {
         });
     }
 
-    private void retrieveCitiesWith(int provinceId) {
+    private void retrieveCitiesWith(long provinceId) {
         progressBar.setVisibility(View.VISIBLE);
         addressProvider.provideCitiesWith(provinceId, new AddressProvider.AddressReceiver<City>() {
             @Override
@@ -429,7 +429,7 @@ public class AddressSelector implements AdapterView.OnItemClickListener {
         });
     }
 
-    private void retrieveCountiesWith(int cityId) {
+    private void retrieveCountiesWith(long cityId) {
         progressBar.setVisibility(View.VISIBLE);
         addressProvider.provideCountiesWith(cityId, new AddressProvider.AddressReceiver<County>() {
             @Override
@@ -439,7 +439,7 @@ public class AddressSelector implements AdapterView.OnItemClickListener {
         });
     }
 
-    private void retrieveStreetsWith(int countyId) {
+    private void retrieveStreetsWith(long countyId) {
         progressBar.setVisibility(View.VISIBLE);
         addressProvider.provideStreetsWith(countyId, new AddressProvider.AddressReceiver<Street>() {
             @Override

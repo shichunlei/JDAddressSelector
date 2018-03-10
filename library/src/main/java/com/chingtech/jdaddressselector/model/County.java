@@ -2,19 +2,26 @@ package com.chingtech.jdaddressselector.model;
 
 public class County {
 
-    private int    id;
-    private int    city_id;
+    private long   id;
+    private long   city_id;
     private String name;
+    private String zipcode;
 
     public County() {
     }
 
-    public County(int id, String name) {
+    public County(long id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public int getId() {
+    public County(long id, String name, String zipcode) {
+        this.id = id;
+        this.name = name;
+        this.zipcode = zipcode;
+    }
+
+    public long getId() {
         return id;
     }
 
@@ -22,7 +29,7 @@ public class County {
         this.id = id;
     }
 
-    public int getCityId() {
+    public long getCityId() {
         return city_id;
     }
 
@@ -36,5 +43,13 @@ public class County {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getZipcode() {
+        return zipcode;
+    }
+
+    public void setZipcode(String zipcode) {
+        this.zipcode = zipcode;
     }
 }

@@ -90,7 +90,7 @@ public class DbUtils {
      *
      * @return
      */
-    public List<City> getCityList(int proId) {
+    public List<City> getCityList(long proId) {
         List<City> proList = new ArrayList<>();
         try {
             Cursor cursor = db.rawQuery(
@@ -124,7 +124,7 @@ public class DbUtils {
      *
      * @return
      */
-    public List<County> getCountyList(int cityId) {
+    public List<County> getCountyList(long cityId) {
         List<County> proList = new ArrayList<>();
         try {
             Cursor cursor = db.rawQuery(
@@ -158,7 +158,7 @@ public class DbUtils {
      *
      * @return
      */
-    public List<Street> getStreetList(int countyId) {
+    public List<Street> getStreetList(long countyId) {
         List<Street> proList = new ArrayList<>();
         try {
             Cursor cursor = db.rawQuery(

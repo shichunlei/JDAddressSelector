@@ -44,19 +44,19 @@ public class AreaProvider implements AddressProvider {
     }
 
     @Override
-    public void provideCitiesWith(int provinceId, AddressReceiver<City> addressReceiver) {
+    public void provideCitiesWith(long provinceId, AddressReceiver<City> addressReceiver) {
         List<City> cityQueryList = dbUtils.getCityList(provinceId);
         addressReceiver.send(new ArrayList<>(cityQueryList));
     }
 
     @Override
-    public void provideCountiesWith(int cityId, AddressReceiver<County> addressReceiver) {
+    public void provideCountiesWith(long cityId, AddressReceiver<County> addressReceiver) {
         List<County> countyQueryList = dbUtils.getCountyList(cityId);
         addressReceiver.send(new ArrayList<>(countyQueryList));
     }
 
     @Override
-    public void provideStreetsWith(int countyId, AddressReceiver<Street> addressReceiver) {
+    public void provideStreetsWith(long countyId, AddressReceiver<Street> addressReceiver) {
         List<Street> streetQueryList = dbUtils.getStreetList(countyId);
         addressReceiver.send(new ArrayList<>(streetQueryList));
     }

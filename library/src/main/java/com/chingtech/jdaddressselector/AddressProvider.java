@@ -10,11 +10,11 @@ import com.chingtech.jdaddressselector.model.Street;
 public interface AddressProvider {
     void provideProvinces(AddressReceiver<Province> addressReceiver);
 
-    void provideCitiesWith(int provinceId, AddressReceiver<City> addressReceiver);
+    void provideCitiesWith(long provinceId, AddressReceiver<City> addressReceiver);
 
-    void provideCountiesWith(int cityId, AddressReceiver<County> addressReceiver);
+    void provideCountiesWith(long cityId, AddressReceiver<County> addressReceiver);
 
-    void provideStreetsWith(int countyId, AddressReceiver<Street> addressReceiver);
+    void provideStreetsWith(long countyId, AddressReceiver<Street> addressReceiver);
 
     interface AddressReceiver<T> {
         void send(List<T> data);
